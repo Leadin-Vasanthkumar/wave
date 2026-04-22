@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Comic Relief';
+  src: url('https://cdn.jsdelivr.net/gh/googlefonts/comic-relief@master/fonts/ttf/ComicRelief.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-comic: "Comic Relief", "Comic Neue", "Comic Sans MS", cursive;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+  @apply antialiased;
+}

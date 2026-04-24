@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, KeyboardEvent, useRef } from 'react';
+import { useState, useEffect, KeyboardEvent, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Trash2, Check } from 'lucide-react';
 import TextareaAutosize from 'react-textarea-autosize';
@@ -15,8 +15,25 @@ type Block = {
   completed?: boolean;
 };
 
+const STORAGE_KEY = 'todo-blocks-data';
+
 export default function App() {
-  const [blocks, setBlocks] = useState<Block[]>([]);
+  const [blocks, setBlocks] = useState<Block[]>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      try {
+        return JSON.parse(saved);
+      } catch (e) {
+        return [];
+      }
+    }
+    return [];
+  });
+  
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(blocks));
+  }, [blocks]);
+
   const [input, setInput] = useState('');
 
   const blockRefs = useRef<{ [key: number]: HTMLTextAreaElement | null }>({});
@@ -179,5 +196,3 @@ export default function App() {
     </div>
   );
 }
-
-

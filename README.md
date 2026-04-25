@@ -97,7 +97,7 @@ Built by **[Vasanth Kumar](https://vasanthkumar.work)** — a 14-year-old develo
 
 - 🌐 [vasanthkumar.work](https://vasanthkumar.work)
 - 🐦 [@VasanthKumar_16](https://twitter.com/VasanthKumar_16)
-- 📧 [leadin.agency@gmail.com](mailto:leadin.agency@gmail.com)
+- 📧 [contact@vasanthkumar.work](mailto:contact@vasanthkumar.work)
 
 ---
 

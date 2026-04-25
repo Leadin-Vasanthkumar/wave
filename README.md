@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # 🌊 Wave
 
@@ -108,4 +108,3 @@ Made with ❤️ and a lot of `/` commands.
 ⭐ **Star this repo if Wave helps you focus!**
 
 </div>
-]]>
